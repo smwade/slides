@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>CS650</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/black.css">
@@ -26,14 +26,20 @@
 			<div class="slides">
 
 				<section>
-					<h1>Estimating Roof Slope</h1>
+					<h1>Estimating Roof Position</h1>
 					<p>Sean Wade</p>
 				</section>
 
+				<section data-background-video="resources/example-roof.mov" data-background-video-loop data-background-video-muted>
+							<h2>The Problem</h2>
+				</section>
+
 				<section>
-					<h4>Problem:</h1>
+					<h3>Several Methods</h3>
 					<ul>
-						<li>Minimum info to find slope of a roof</li>
+						<li class="fragment">Multi View Stereo</li>
+						<li class="fragment">Structure from Motion</li>
+						<li class="fragment">Texture</li>
 					</ul>
 				</section>
 
@@ -59,8 +65,6 @@
 					{ src: 'plugin/notes/notes.js', async: true },
 					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
 				]
-				
-
 			});
 		</script>
 	</body>
