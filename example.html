@@ -4,10 +4,10 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>CS611</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/theme/night.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -24,8 +24,55 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+
+				<section>
+					<h3>Reveal.Js: A Love Story</h3>
+					<p>Sean Wade</p>
+				</section>
+
+				<section>
+					<p>Using Reveal.js for presentations is real easy</p>
+				</section>
+
+				<section>
+					<p>Behold, Latex. No problem. No biggie.</p>
+					<p> $\sum_{i=0}^\infty = a_nx$ </p>
+				</section>
+
+				<section>
+					<p>Dont forget some code</p>
+					<pre><code class="python" data-trim>
+					for i in range(3,90):
+						l.append(i)
+						yield i
+					return True
+					</code></pre>
+				</section>
+
+				<section>
+					<section>
+						<h5>Wait, can we scroll down??</h5>
+					</section>
+					
+					<section>
+						<p>Yes.</p>
+					</section>
+
+					<section>
+						<p>Now that is pretty nice</p>
+					</section>
+
+					<section id="fragments">
+						<p>I can also just have fragments...</p>
+						<p class="fragment">on the same slide</p>
+					</section>
+				</section>
+
+				<section id="fragments">
+					<p>wow...</p>
+					<h3 class="fragment">THE END</h3>
+				</section>
+
 			</div>
 		</div>
 
@@ -37,8 +84,19 @@
 			// - https://github.com/hakimel/reveal.js#configuration
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
+				controls: true,
+				progress: true,
+				hideAddressBar: true,
+				transitionSpeed: 'default',
+
+				math: {
+					mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+					config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+				},
+
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/math/math.js', async: true },
 					{ src: 'plugin/markdown/markdown.js' },
 					{ src: 'plugin/notes/notes.js', async: true },
 					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
